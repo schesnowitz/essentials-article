@@ -18,7 +18,8 @@
         <hr>
 
         <!-- Date/Time -->
-        <p><span class="glyphicon glyphicon-time"></span> Was Posted: 
+        <p><span class="glyphicon glyphicon-time"></span> Was posted about 
+        <%= time_ago_in_words(@article.created_at) %> ago</p>
      
 
         <hr>

@@ -8,6 +8,7 @@
         <h4 style="font-size: 45.5px;"><%= link_to article.title, article %></h4>
                         <!-- Date/Time -->
         <p><span class="glyphicon glyphicon-time"></span> 
+        <%= time_ago_in_words(article.created_at) %>
         </p>
         
 
