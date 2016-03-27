@@ -1,7 +1,4 @@
 git add -A
-git commit -m "form update"
+git commit -m "your comments"
 git push origin master 
-git push heroku master
-
-   
-   
+git checkout -b paperclip
