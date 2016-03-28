@@ -1,4 +1,5 @@
 git add -A
-git commit -m "paperclip and aws"
-git push origin master 
+git commit -m "updated article and comments style"
+git push origin master
 git push heroku master
+

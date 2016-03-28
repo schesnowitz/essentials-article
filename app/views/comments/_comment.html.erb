@@ -1,7 +1,10 @@
+<div class="color round2">
 <div class="media">
     <div class="pull-left">
         
-        <%= comment.user.username %>
+       <strong>Comment by: <%= comment.user.username %><br /></strong> 
+        <%= image_tag comment.user.image.url(:thumb),  class: "img-circle" %>
+        
        
     </div>
     <div class="media-body">
@@ -12,8 +15,15 @@
        
     </div>
 </div>
+<br />
 
 
-	<%= link_to "Edit", edit_article_comment_path(comment.article, comment) %>
 
-<%= link_to "Delete", [comment.article, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+	<%= link_to "Edit Comment", edit_article_comment_path(comment.article, comment),  
+class: "btn btn-success btn-xs round"  %>
+
+<%= link_to "Delete Comment", [comment.article, comment], method: :delete, data: { confirm: "Are you sure?" },  
+class: "btn btn-info btn-xs round"  %>
+</div>
+<br />
+

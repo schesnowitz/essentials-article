@@ -5,8 +5,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.paginate(page: params[:page], per_page: 5) 
-    @last5 = Article.last(5)
+    @articles = Article.paginate(page: params[:page], per_page: 5).order("created_at DESC")
+    @last5 = Article.order("created_at DESC").last(5)
   end
 
   # GET /articles/1
