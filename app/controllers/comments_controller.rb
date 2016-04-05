@@ -1,5 +1,9 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
+  load_and_authorize_resource :article
+  load_and_authorize_resource :through => :article
+  
+  
 
   def create
     @article = Article.find(params[:article_id])
