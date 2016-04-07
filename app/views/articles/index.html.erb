@@ -37,7 +37,7 @@
           <h4>Recent articles</h4>
             <% @last5.each do |a| %>
               Created by: <%= a.user.username %><br />
-              <strong><%= link_to a.title, a %></strong>
+              <strong><%= link_to truncate(a.title, length: 35), a %></strong>
               <p><%= truncate(a.body) %></p>
             <% end %>
     </div>
