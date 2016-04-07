@@ -1,9 +1,7 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource :article
-  load_and_authorize_resource :through => :article
-  
-  
+  load_and_authorize_resource param_method: :my_sanitizer
+  load_and_authorize_resource :through => :current_user
 
   def create
     @article = Article.find(params[:article_id])
@@ -42,4 +40,11 @@ end
   end
   
   
-end
+    private
+
+  def my_sanitizer
+    params.require(:comment).permit(:body)
+  end
+
+
+end 

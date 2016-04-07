@@ -18,14 +18,15 @@
 <br />
 
 
-<% if can? :update, comment %> 
+<% if can? :update, comment %>
 <%= link_to "Edit Comment", edit_article_comment_path(comment.article, comment),  
 class: "btn btn-success btn-xs round"  %>
 <% end %>
-<% if can? :destroy, comment %>
+<% if can? :destroy, comment %>|
 <%= link_to "Delete Comment", [comment.article, comment], method: :delete, data: { confirm: "Are you sure?" },  
 class: "btn btn-info btn-xs round"  %>
 <% end %>
+
 </div>
 <br />
 

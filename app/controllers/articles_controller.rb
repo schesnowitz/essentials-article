@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    authorize! :crud, @article
+    authorize! :update, @article
   end
 
   # POST /articles
@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
-  end
+  end 
 
   # DELETE /articles/1
   # DELETE /articles/1.json 
