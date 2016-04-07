@@ -1,5 +1,5 @@
 git add -A
-git commit -m "cancancan and finish"
+git commit -m "housekeeping"
 git push origin master
 git push heroku master
 
